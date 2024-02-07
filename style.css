@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+:root{
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto';
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--charcoal-grey);
+}
+main{
+    width: 930px;
+    height: 640px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 20px;
+}
+.content-info{
+    padding: 80px 100px 80px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.desc-g h1{
+    padding: 10px 0;
+
+    font-size: 50px;
+    color: var(--charcoal-grey);
+}
+.desc-g p{
+    padding: 10px 0;
+
+    font-size: 16px;
+    color: var(--dark-slate-grey);
+}
+.desc-g .list{
+    margin-top: 20px;
+}
+.desc-g .li{
+    display: flex;
+    gap: 10px;
+}
+.signup-g{
+    display: flex;
+    flex-direction: column;
+}
+.signup-g p{
+    margin-bottom: 5px;
+
+    color: var(--dark-slate-grey);
+    font-weight: 700;
+    font-size: 13px;
+}
+.signup-g #email, button{
+    height: 50px;
+
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.signup-g #email{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--grey);
+}
+.signup-g #email:focus{
+    outline:none;
+}
+button{
+    font-weight: 700;
+    color: white;
+    background-color: var(--charcoal-grey);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+button:hover{
+    background: rgb(255,90,102);
+    background: linear-gradient(270deg, rgba(255,90,102,1) 0%, rgba(255,98,79,1) 100%); 
+    box-shadow: 0 16px 48px 0px rgba(255,98,81,0.75);
+}
+.signup-desc{
+    display: flex;
+    justify-content: space-between;
+}
+.signup-desc #error-email{
+    font-weight: 400;
+    color: white;
+}
+
+.error-email-active{
+    color: red !important;
+}
+
+
+.signup-success{
+    width: 500px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 60px 90px 60px;
+
+    background-color: white;
+    border-radius: 20px;
+}
+.signup-success img{
+    width: 50px;
+}
+.signup-success h1{
+    margin-bottom: 30px;
+
+    color: var(--charcoal-grey);
+    font-size: 50px;
+}
+.signup-success a{
+    color: var(--charcoal-grey);
+    font-weight: 700;
+}
+
+.none-display{
+    display: none !important;
+}
+
+
+@media only screen and (max-width: 930px){
+    body{
+        align-items: end;
+        height: 842px;
+    }
+    main{
+        width: 375px;
+        height: 842px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        border-radius: 0;
+        padding: 0;
+    }
+    main > img{
+        content: url("images/illustration-sign-up-mobile.svg");
+        border-radius: 0 0 20px 20px;
+    }
+    .content-info{
+        padding: 20px 20px 20px 40px;
+    }
+    .desc-g h1{
+        font-size: 40px;
+    }
+    .desc-g .list{
+        margin-bottom: 50px;
+    }
+    .signup-success{
+        width: 375px;
+        height: 842px;
+        
+        border-radius: 0;
+    }
+}
